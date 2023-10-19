@@ -59,6 +59,7 @@ void _err(int errors, ...)
 void _errs(int errors, ...)
 {
 	va_list a;
+	char *op;
 	int i;
 
 	va_start(a, errors);
@@ -74,7 +75,8 @@ void _errs(int errors, ...)
 			break;
 		case 8:
 			i = va_arg(a, unsigned int);
-			fprintf(stderr, "L%d: can't swap, stack too short\n", i);
+			op = va_arg(a, char *);
+			fprintf(stderr, "L%d: can't %s, stack too short\n", i, op);
 			break;
 		case 9:
 			fprintf(stderr, "L%d: division by zero\n",
