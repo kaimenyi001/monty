@@ -62,6 +62,7 @@ void _swap(stack_t **, unsigned int);
 void _pchar(stack_t **, unsigned int);
 void _rotl(stack_t **, unsigned int);
 void _pstr(stack_t **, unsigned int);
+void _pop(stack_t **, unsigned int);
 void _rotr(stack_t **, unsigned int);
 void _err(int errors, ...);
 void free_nd(void);

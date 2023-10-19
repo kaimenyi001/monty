@@ -142,7 +142,7 @@ void calls(op_func fn, char *op, char *val, int ln, int format)
 		}
 		if (val == NULL)
 			_err(5, ln);
-		for (i = 0; val[j] != '\0'; j++)
+		for (j = 0; val[j] != '\0'; j++)
 		{
 			if (isdigit(val[j]) == 0)
 				_err(5, ln);
